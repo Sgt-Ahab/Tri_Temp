@@ -3,10 +3,13 @@
 
 def ckswap(temp, unit):
     """Converts C to K and returns K to push."""
-    pass
-
+    temp  = temp + 273.15
+    unit = 'K'
+    return temp, unit
 
 def kcswap(temp, unit):
     """Converts K to C and returns C to push."""
-    pass
+    temp  = temp - 273.15
+    unit = 'C'
+    return temp, unit
 
