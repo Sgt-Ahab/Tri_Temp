@@ -1,23 +1,17 @@
 This is a module I am creating debuted at 2:49 AM on 8/29/2025.
 It is intented to, AS FOLLOWING:
 Take input, and with specified temperature unit following, will convert to requested temperature.
-Timeline of Work: 12/15/25-12/20/25;
+Timeline of Work: 12/15/25-12/20/25; <delayed from Sickness>
+                12/31/25 - 01/XX/26
 
 The logic should:
-1. Take user input, and save it as temp_request ("tr")
-2. With the request, make it converted to requested unit.
-3a. Commence Unit Conversion Flow ("UCF"):
-3b. If tr-Unit ('tr.u') is K/F requesting to its invert then 3c, otherwise 3d
-3c. tr.u shall be sent to Celsius as a middle-unit to facillitate conversion.
-3d. Perform mathematical conversion to tr
-4. Display temp_request to convert. (Keep tr.u outputted to either the hundred/ten-thousandths for exact math conversion to output in the hundredths)
-5. Store for future usage.
-
-Anticipated Future Endeavor for Project:
-• Use for Data Crawls, and convert to Future Unit (FU) request. Dictionary screenings allow conversions to happen in effort and potential exports. 
-• Modularized for Science Processes and Manufacturing Processes
-• Further temperatures if anymore are decided by me, added in additions log below.
+1. Takes User Input and Converts to request.
+2. Request is C for Celsius, K for Kelvin, and F for Fahrenheit.
+3. Math remains untouched, is displayed with two integers rounded.
+4. User will be asked to convert same request to anew or enter new.
+5. Exit if 'N'
 
 
 ****ADDITION LOG****
 8/29/2025: Creation of 'readme.txt' & Logic Flow for project concept; Begin main repository work. Lay modules skeletons and make main skeleton.
+12/31/2025: Coded first portion, trimmed readme to align to mission objective, SIMPLE CLI Temperature Conversion.
