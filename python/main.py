@@ -4,13 +4,15 @@
 # import clauses
 from f_temp_tri import fcswap, cfswap, kfswap, fkswap
 from c_k_pair import ckswap, kcswap
-# aliases
+# Functions
 
 def temp_request(temp, unit):
     """This is for taking temperature request, 
     and a logic block to prevent non-integer usage"""
     temp = float(input("Number of Temp: "))
     unit = input("Unit Type (F, C, K): ").strip().upper()
+    while temp <= 0 and unit == 'K':
+        temp = float(input("Kelvin inputs cannot be less than 0, re-enter Temp: "))
     return temp, unit
         
 # 'req'uest 'conv'ersion is for final temp piece
@@ -42,5 +44,10 @@ def req_conv(temp, unit):
         new_temp, new_unit = req_conv(temp, unit)
         print(f"Converted Temperature: {new_temp:.2f} {new_unit}")
     if __name__ == "__main__":
+       #Only runs when accessed as file.
         main()          
-# end result displayed
+
+#Need to Unit Test and Run:
+#Input, Errors, Temps <F:{};C:{};K:{}>
+#Run the loop, and make it happen for User Extension of Permission. {}
+#Clean Up VSCode CoPilot advisory {}
