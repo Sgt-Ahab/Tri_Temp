@@ -1,6 +1,7 @@
 #Main Project:
 #Take and validate numeric-input, and unit: Units (F/C/K)
 #Maximum Temperature included, when converted displays all three and asks to run again.
+import os
 ABS_ZERO_C = -273.15
 ABS_ZERO_F = -459.67
 ABS_ZERO_K = 0.0
@@ -91,12 +92,29 @@ def runAgain() -> bool:
         return True
     elif ask == 'N':
         return False
-    
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')    
 def main():
     """Main Function of the Program"""
-
-
+    runProgram = True
+    while runProgram:
+        base = get_Temp()
+        unit = get_Unit()
+        clear_screen()
+        while not abs_Zero(base, unit):
+            clear_screen()
+            base = get_Temp()
+        disp_Res(base, unit)
+        if not runAgain():
+            runProgram = False
+            clear_screen()
+            print("Thanks for running Tri-Temp!")
+        else:
+            clear_screen()
+if __name__ == '__main__':
+    main()
 #Need to Unit Test and Run:
-#Input, Errors, Temps <F:{};C:{};K:{}>
-#Run the loop, and make it happen for User Extension of Permission. {}
-#Clean Up VSCode CoPilot advisory {}
+#Input, Errors, Temps <F:{X};C:{X};K:{X}>
+#Run the loop, and make it happen for User Extension of Permission. {X}
+#Clean Up VSCode CoPilot advisory {X}
