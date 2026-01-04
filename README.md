@@ -41,7 +41,7 @@ Once released, there is no planned long-term afterwork.
 - **12/31/25 – 01/03/26 + 01/04/26**  
   C++ implementation completed.
   Python Code completed and tested.
-  Releasal anticipated in the afternoon of 01/04/26.
+  Said I wanted it Public ASAP early 01/04/26.
 
 ---
 
